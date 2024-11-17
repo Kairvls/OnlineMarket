@@ -46,7 +46,7 @@ export default function HomePage() {
         <section>
           <div className='mainpage'>
             <p style={{position: 'absolute', paddingTop: '220px', paddingBottom: '220px', paddingLeft: '500px', paddingRight: '500px', marginTop: '90px', marginLeft: '255px', backgroundColor: 'white', opacity: '90%', borderRadius: '10px'}}></p>
-            <Image alt='logo' src="/vegetables.png" style={{position: 'absolute', marginLeft: '280px', width: '450px', height: '420px', marginTop: '90px'}} />
+            <Image src='/vegetables.png' width={500} height={300} alt='logo' style={{position: 'absolute', marginLeft: '280px', marginTop: '50px'}} />
 
             <div className="description1">
             <p style={{position: 'absolute', marginLeft: '820px', fontSize: '45px', marginTop: '120px', fontWeight: 'bold', fontFamily: 'Arial, Helvetica, sans-serif'}}>Online Market</p>
@@ -61,16 +61,16 @@ export default function HomePage() {
             </div>
             
             <div className="icon">
-            <Image alt='logo' src="/instagram.png" style={{position: 'absolute', marginTop: '480px', marginLeft: '680px', width: '30px', height: '30px', cursor: 'pointer'}}/>
-            <Image alt='logo' src="/facebook.png" style={{position: 'absolute', marginTop: '480px', marginLeft: '730px', width: '30px', height: '30px', cursor: 'pointer'}}/>
-            <Image alt='logo' src="/tiktok.webp" style={{position: 'absolute',  marginTop: '480px', marginLeft: '780px', width: '30px', height: '30px', cursor: 'pointer'}}/> 
+            <Image alt='logo' src="/instagram.png" width={500} height={500} style={{position: 'absolute', marginTop: '480px', marginLeft: '690px', width: '30px', height: '30px', cursor: 'pointer'}}/>
+            <Image alt='logo' src="/facebook.png" width={500} height={500} style={{position: 'absolute', marginTop: '480px', marginLeft: '740px', width: '30px', height: '30px', cursor: 'pointer'}}/>
+            <Image alt='logo' src="/tiktok.webp" width={500} height={500} style={{position: 'absolute',  marginTop: '480px', marginLeft: '790px', width: '30px', height: '30px', cursor: 'pointer'}}/> 
             </div>
           </div>
             
         </section>
       </main>
       
-      <Image alt='background' src= "/fruitsmarket.jpg" style= {{width: '2000px', height: '595px'}} />
+      <Image alt='background' src= "/fruitsmarket.jpg" width={500} height={500} style= {{width: '2000px', height: '595px'}} />
     </div>
   );
 }

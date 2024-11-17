@@ -107,6 +107,34 @@ a:hover {
     height: 20px;
     cursor: pointer;
 }
+
+.servicespage {
+    background-color: blue;
+}
+.gcash {
+    animation: blink 1s ease-in-out 1 forwards;
+}
+.paymaya {
+    animation: blink 1s ease-in-out 0.2s 1 forwards;
+}
+.bdo {
+    animation: blink 1s ease-in-out 0.3s 1 forwards;
+}
+.securitybank {
+    animation: blink 1s ease-in-out 0.4s 1 forwards;
+}
+.metrobank {
+    animation: blink 1s ease-in-out 0.5s 1 forwards;
+}
+.bpi {
+    animation: blink 1s ease-in-out 0.6s 1 forwards;
+}
+.paycash {
+    animation: blink 1s ease-in-out 0.7s 1 forwards;
+}
+.visa {
+    animation: blink 1s ease-in-out 0.8s 1 forwards;
+}
 @keyframes blink {
     from {
         opacity: 0;
@@ -118,7 +146,4 @@ a:hover {
         transform: translate(0);
         filter: blur(0);
     }
-}
-.servicespage {
-    background-color: blue;
 }

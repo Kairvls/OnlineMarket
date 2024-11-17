@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navigation {
+    background-image: url(/IMG_20241116_220020.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 90px;
+    max-width: 100%;
+}
+input::placeholder {
+    color: black;
+}
+.mainpage {
+    
+    
+}
+a:hover {
+    
+    color: blue;
+}
+.available {
+    animation: blink 1s ease-in-out 1 forwards;
+}
+.available:hover {
+    text-decoration: underline;
+}
+.services {
+    animation: blink 1s ease-in-out 0.2s 1 forwards;
+}
+.services:hover {
+    text-decoration:underline;
+}
+.discounted {
+    animation: blink 1s ease-in-out 0.3s 1 forwards;
+}
+.discounted:hover {
+    text-decoration: underline;
+}
+.section {
+    animation: blink 1s ease-in-out 0.4s 1 forwards;
+}
+.section:hover {
+    text-decoration: underline;
+}
+.signup {
+    animation: blink 1s ease-in-out 0.5s 1 forwards;
+}
+.signup:hover {
+    background-color: gray;
+}
+.description1 {
+    animation: blink 1s ease-in-out 1 forwards;
+}
+.description2 {
+    animation: blink 1s ease-in-out 0.3s 1 forwards;
+}
+.description3 {
+    animation: blink 1s ease-in-out 0.5s 1 forwards;
+}
+.table {
+    position: absolute;
+    margin-left: 100px;
+    margin-top: 100px;
+    cursor: pointer;
+}
+.table thead tr th {
+    padding-left: 8px;
+    padding-right: 8px;
+    border: 1px solid white;
+    padding: 3px;
+    
+}
+.table thead tr td {
+    background-color: white;
+    border: 1px solid black;
+    text-indent: 5px;
+}
+.table thead tr td:hover {
+    background-color: #ccc;
+    
+}
+.bi-search {
+    position: absolute;
+    margin-left: 145px;
+    margin-top: -75px;
+    width: 20px;
+    height: 20px;
+}
+.bi-cart4 {
+    position: absolute;
+    margin-left: 1350px;
+    margin-top: -78px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.bi-heart-fill {
+    position: absolute;
+    margin-left: 1250px;
+    margin-top: -78px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+@keyframes blink {
+    from {
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+.servicespage {
+    background-color: blue;
+}

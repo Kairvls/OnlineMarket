@@ -2,6 +2,7 @@
 import React from 'react';
 import '../styles.css';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function AvailablePage() {
 
@@ -30,7 +31,7 @@ export default function AvailablePage() {
                         <td>Pancit Cantoon</td>
                         <td>Giniling</td>
                         <td>Pecho Part</td>
-                        <td>Nature's Spring</td>
+                        <td>Natures Spring</td>
                         <td>Kalabasa</td>
                         <td>Apple</td>
                         <td>Nova</td>
@@ -53,7 +54,7 @@ export default function AvailablePage() {
                 </thead>
                 <thead>
                     <tr>
-                        <td>Young'stown Sardines</td>
+                        <td>Youngstown Sardines</td>
                         <td>Shrimp</td>
                         <td>Batchoy</td>
                         <td></td>
@@ -166,10 +167,10 @@ export default function AvailablePage() {
             </table>
             
             <Link href="/" style={{ position: 'absolute', backgroundColor: 'black', color: 'white', paddingLeft: '10px', paddingRight: '10px', paddingTop: '3px', paddingBottom: '3px', marginLeft: '20px', marginTop: '20px', border: '1px solid white', borderRadius: '4px'}}>Back</Link>
-            <img src='/IMG_20241116_220020.jpg' style={{width: '2000px', height: '785px'}}></img>
+            <Image src="/IMG_20241116_220020.jpg" alt="background" style={{width: '2000px', height: '785px'}} />
             <p style={{ position: 'absolute', backgroundColor: '#ccc', paddingRight: '350px', paddingTop: '50px', paddingBottom: '200px', marginLeft: '100px', marginTop: '-350px', borderRadius: '10px'}}></p>
             <p style={{ position: 'absolute', backgroundColor: 'orangered', paddingRight: '350px', paddingTop: '50px', paddingBottom: '180px', marginLeft: '100px', marginTop: '-340px', borderRadius: '10px'}}></p>
-            <img src='/meat.png' style={{position: 'absolute', width: '220px', height: '200px', marginTop: '-120px', marginLeft: '50px'}}></img>
+            <Image src='/meat.png' alt='logo' style={{position: 'absolute', width: '220px', height: '200px', marginTop: '-120px', marginLeft: '50px'}} />
 
             <p style={{ position: 'absolute', backgroundColor: '#ccc', paddingRight: '350px', paddingTop: '50px', paddingBottom: '200px', marginLeft: '590px', marginTop: '-350px', borderRadius: '10px'}}></p>
             <p style={{ position: 'absolute', backgroundColor: 'orangered', paddingRight: '350px', paddingTop: '50px', paddingBottom: '180px', marginLeft: '590px', marginTop: '-340px', borderRadius: '10px'}}></p>

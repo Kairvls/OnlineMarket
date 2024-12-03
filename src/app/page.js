@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
 
@@ -8,28 +8,32 @@ export default function LoginPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
+    const [isClient, setIsClient] = useState(false);
     const router = useRouter();
+
+    // Set isClient to true after the component mounts to ensure client-side rendering
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
 
     const handleLogin = async (e) => {
         e.preventDefault();
-        
-        // Send login request
+
         const response = await fetch('/api/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email, password }),
         });
 
-        // Check if the login is successful
         if (response.ok) {
-            // Redirect to the dashboard if login is successful
             router.push('/dashboard'); // Ensure you have this page in the app
         } else {
             const data = await response.json();
-            // Show error message from the backend (if any)
             alert(data.error || 'Login failed');
         }
     };
+
+    if (!isClient) return null; // Return null before the client has mounted to prevent SSR mismatches
 
     return (
       <div className="flex items-center justify-center min-h-screen bg-gray-100">

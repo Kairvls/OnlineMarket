@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
 
@@ -9,7 +9,13 @@ export default function SignupPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
+    const [isClient, setIsClient] = useState(false); // Track client-side rendering
     const router = useRouter();
+
+    // Set isClient to true after the component mounts to ensure client-side rendering
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
 
     const handleSignup = async (e) => {
         e.preventDefault();
@@ -26,6 +32,8 @@ export default function SignupPage() {
             alert('Signup failed');
         }
     };
+
+    if (!isClient) return null; // Ensure rendering happens only on the client side
 
     return (
         <div className="min-h-screen flex justify-center items-center bg-gray-100">

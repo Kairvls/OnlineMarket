@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
@@ -95,10 +96,10 @@ export default function LoginPage() {
                 
                 <div className="mt-4 text-center">
                     <p className="text-sm text-gray-600">
-                        Don't have an account?{' '}
-                        <a href="/signup" className="text-indigo-600 hover:text-indigo-800">
+                        Don&apos;t have an account?{' '}
+                        <Link href="/signup" className="text-indigo-600 hover:text-indigo-800">
                             Go to Signup
-                        </a>
+                        </Link>
                     </p>
                 </div>
             </div>

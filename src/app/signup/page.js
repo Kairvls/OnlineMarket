@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
@@ -9,10 +10,10 @@ export default function SignupPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
-    const [isClient, setIsClient] = useState(false); // Track client-side rendering
+    const [isClient, setIsClient] = useState(false); 
     const router = useRouter();
 
-    // Set isClient to true after the component mounts to ensure client-side rendering
+    
     useEffect(() => {
         setIsClient(true);
     }, []);
@@ -33,7 +34,7 @@ export default function SignupPage() {
         }
     };
 
-    if (!isClient) return null; // Ensure rendering happens only on the client side
+    if (!isClient) return null; 
 
     return (
         <div className="min-h-screen flex justify-center items-center bg-gray-100">
@@ -73,7 +74,7 @@ export default function SignupPage() {
                             Password
                         </label>
                         <input
-                            type={showPassword ? 'text' : 'password'} // Toggle between text and password
+                            type={showPassword ? 'text' : 'password'} 
                             id="password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
@@ -82,7 +83,7 @@ export default function SignupPage() {
                         />
                         <button
                             type="button"
-                            onClick={() => setShowPassword(!showPassword)} // Toggle the showPassword state
+                            onClick={() => setShowPassword(!showPassword)} 
                             className="absolute mt-[70px] ml-[-30px] top-1/2 transform -translate-y-1/2"
                         >
                             {showPassword ? <AiFillEyeInvisible size={20} /> : <AiFillEye size={20} />}
@@ -102,12 +103,12 @@ export default function SignupPage() {
                 <div className="mt-4 text-center">
                     <span className="text-sm text-gray-600">
                         Already have an account?{' '}
-                        <a
+                        <Link
                             href="/"
                             className="text-blue-500 hover:text-blue-600 font-medium"
                         >
                             Login
-                        </a>
+                        </Link>
                     </span>
                 </div>
             </div>

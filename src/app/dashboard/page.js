@@ -76,7 +76,6 @@ export default function DashboardPage() {
             <h1 className="mb-1 mt-[-60px] text-[60px] font-bold text-white">Quick Mart</h1>
               <h2 className="mb-1 text-lg font-medium text-[#808080]">Welcome to Quick Mart – Your One-Stop Online Marketplace!</h2>
             
-            /* From Uiverse.io by Itskrish01 */ 
             <div>
             <button
               className="relative inline-flex h-12 active:scale-95 transistion overflow-hidden rounded-lg p-[1px] focus:outline-none"

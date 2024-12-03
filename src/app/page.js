@@ -11,7 +11,7 @@ export default function LoginPage() {
     const [isClient, setIsClient] = useState(false);
     const router = useRouter();
 
-    // Set isClient to true after the component mounts to ensure client-side rendering
+    
     useEffect(() => {
         setIsClient(true);
     }, []);
@@ -26,21 +26,21 @@ export default function LoginPage() {
         });
 
         if (response.ok) {
-            router.push('/dashboard'); // Ensure you have this page in the app
+            router.push('/dashboard'); 
         } else {
             const data = await response.json();
             alert(data.error || 'Login failed');
         }
     };
 
-    if (!isClient) return null; // Return null before the client has mounted to prevent SSR mismatches
+    if (!isClient) return null; 
 
     return (
       <div className="flex items-center justify-center min-h-screen bg-gray-100">
             <div className="w-full max-w-md bg-white p-8 rounded-lg shadow-lg">
                 <h2 className="text-2xl font-bold text-center mb-6">Login</h2>
                 <form onSubmit={handleLogin} className="space-y-4">
-                    {/* Email Input */}
+                    
                     <div>
                         <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                             Email
@@ -55,23 +55,23 @@ export default function LoginPage() {
                         />
                     </div>
 
-                    {/* Password Input */}
+                    
                     <div className="relative">
                         <label htmlFor="password" className="block text-sm font-medium text-gray-700">
                             Password
                         </label>
                         <input
-                            type={showPassword ? 'text' : 'password'} // Toggle input type based on showPassword state
+                            type={showPassword ? 'text' : 'password'} 
                             id="password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                             className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
                             required
                         />
-                        {/* Eye Icon for Show/Hide Password */}
+                        
                         <div
                             className="absolute mt-3 right-4 top-1/2 transform -translate-y-1/2 cursor-pointer"
-                            onClick={() => setShowPassword(!showPassword)} // Toggle the state on click
+                            onClick={() => setShowPassword(!showPassword)} 
                         >
                             {showPassword ? (
                                 <AiFillEyeInvisible size={24} className="text-gray-600" />
@@ -81,7 +81,7 @@ export default function LoginPage() {
                         </div>
                     </div>
 
-                    {/* Login Button */}
+                    
                     <div>
                         <button
                             type="submit"
@@ -92,7 +92,7 @@ export default function LoginPage() {
                     </div>
                 </form>
 
-                {/* Go to Signup Link */}
+                
                 <div className="mt-4 text-center">
                     <p className="text-sm text-gray-600">
                         Don't have an account?{' '}

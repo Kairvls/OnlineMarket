@@ -1,0 +1,464 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+body {
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+}
+header {
+    position: fixed;
+    top: 0;
+    left: -50px;
+    width: 120%;
+    padding: 10px 100px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    z-index: 99;
+    color: white;
+    
+    
+}
+h2 {
+    font-size: 15px;
+    margin-left: 10px;
+    color: white;
+}
+.bi-box-fill {
+    cursor: pointer;
+    width: 30px;
+    height: 40px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.bi-box-fill:hover {
+    transform: rotate(360deg) scale(1.1);
+    color: rgb(115, 246, 251);
+}
+nav {
+    padding-left: 1030px;
+    
+}
+header a {
+    font-size: 15px;
+    text-decoration: none;
+    padding-inline: 10px;
+    transition: background-image 0.3s, transform 0.3s;
+    
+}
+header a:hover {
+    transform: scale(0.75);
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-image: linear-gradient(
+    0deg,
+    hsl(187deg 100% 33%) 0%,
+    hsl(188deg 74% 37%) 10%,
+    hsl(188deg 62% 38%) 18%,
+    hsl(188deg 54% 38%) 27%,
+    hsl(188deg 48% 38%) 35%,
+    hsl(188deg 43% 38%) 44%,
+    hsl(188deg 38% 38%) 52%,
+    hsl(188deg 34% 38%) 60%,
+    hsl(188deg 30% 37%) 68%,
+    hsl(187deg 26% 37%) 76%,
+    hsl(187deg 22% 36%) 84%,
+    hsl(187deg 19% 36%) 92%,
+    hsl(186deg 16% 35%) 100%
+);
+    border: 1px solid black;
+    border-radius: 4px;
+}
+.video{
+    width: 100px;
+    height: 100px;
+}
+section {
+    margin-left: 50px;
+    margin-top:-50px;
+    cursor: pointer;
+    position: relative;
+    max-width: 400px;
+    background-color: black;
+    opacity: 90%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 2rem 3rem;
+    border-radius: 20px;
+    border: 2px solid white;
+    box-shadow: 0, 0, 10 rgb(67, 119, 146);
+}
+@keyframes animate {
+    from {
+        opacity: 1;
+        transform: translate(0, 100px);
+        backdrop-filter: blur(33px);
+    }
+    to {
+        opacity: 0;
+        transform: translate(0);
+        backdrop-filter: blur(0);
+    }
+}
+h1 {
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(90deg, white, gray );
+    background-size: 400%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: animate 8s linear infinite;
+}
+.inputbox {
+    position: relative;
+    margin: 30px 0;
+    max-width: 250px;
+    border-bottom: 2px solid white;
+}
+.inputbox label {
+    position: absolute;
+    top: 65%;
+    left: 0px;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+    font-size: 14px;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+    top: -2px;
+}
+.inputbox input {
+    width: 100%;
+    height: 60px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 0 35px 0 5px;
+    color: white;
+}
+.forget {
+    margin-top: -10px;
+    margin-bottom: 15px;
+    color: white;
+    font-size: 12px;
+    margin-right: -0px;
+    text-align: center;
+    font-family: aria;
+}
+a {
+    color: white;
+}
+button a {
+    text-decoration: none;
+}
+p {
+    position: absolute;
+    margin-left: 25px;
+    color: white;
+    font-size: 13px;
+}
+p a{
+    font-size: 12px;
+}
+button {
+    color: white;
+}
+button {
+    cursor: pointer;
+    position: relative;
+    background: blue;
+    border: none;
+    
+    margin-left: 0px;
+    padding: 2px 108px 2px 108px;
+    color: white;
+    margin-bottom: 10px;
+    display: inline-block;
+    transition: 0.3s;
+    text-decoration: none;
+    overflow: hidden;
+}
+button:hover {
+    border-radius: 5px;
+    box-shadow: 0 0 5px white,
+        0 0 25px white,
+        0 0 50px white,
+        0 0 100px white;
+    background-color: white;
+    color: black;
+}
+button:hover a {
+    color: black;
+}
+button span {
+    position: absolute;
+    display: block;
+
+}
+button span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #eaeeee);
+    animation: btn-anim1 1s linear infinite;
+}
+@keyframes btn-anim1 {
+    0% {
+        left: -100%;
+    }
+
+    50%,
+    100% {
+        left: 100%;
+    }
+}
+button span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #f1f4f5);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s;
+}
+@keyframes btn-anim2 {
+    0% {
+        top: -100%;
+    }
+
+    50%,
+    100% {
+        top: 100%;
+    }
+}
+button span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #eff8f8);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s;
+}
+@keyframes btn-anim3 {
+    0% {
+        right: -100%;
+    }
+
+    50%,
+    100% {
+        right: 100%;
+    }
+}
+button span:nth-child(4) {
+    bottom: 100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #e2eeee);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s;
+}
+@keyframes btn-anim4 {
+    0% {
+        bottom: -100%;
+    }
+
+    50%,
+    100% {
+        bottom: 100%;
+    }
+}
+.register {
+    color: white;
+    font-size: 12px;
+    text-align: center;
+}
+.bi-envelope {
+    width: 20px;
+    height: 25px;
+    margin-bottom: -55px;
+    margin-left: 230px;
+}
+.bi-lock {
+    width: 20px;
+    height: 25px;
+    margin-bottom: -55px;
+    margin-left: 230px;
+}
+.search-box-hover .search-txt {
+    width: 240px;
+    padding: 0 6px;
+}
+.search-box-hover .search-btn {
+    background: #fff;
+}
+video .src {
+    width: 1000;
+    height: 1000;
+}
+.back-btn {
+    width: 20px;
+    height: 20px;
+    color: #03e9f4;
+}
+h2 {
+    text-align: center;
+    font-size: 25px;
+    background-image: linear-gradient(90deg, white, gray);
+    background-size: 400%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: animate 8s linear infinite;
+}
+@keyframes animate {
+    0%{
+        background-position:0%;
+    }
+    100%{
+        background-position:400%;
+    }
+}
+.register {
+    position: relative;
+    margin: 30px 0;
+    max-width: 265px;
+    border-bottom: 2px solid white;
+}
+.register label {
+    position: absolute;
+    top: 65%;
+    left: 0px;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+    font-size: 14px;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+    top: -2px;
+}
+.register input {
+    width: 100%;
+    height: 60px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 0 35px 0 5px;
+    color: white;
+}
+.button1 span {
+    position: absolute;
+    display: block;
+
+}
+.button1 span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: btn-anim1 1s linear infinite;
+}
+@keyframes btn-anim1 {
+    0% {
+        left: -100%;
+    }
+
+    50%,
+    100% {
+        left: 100%;
+    }
+}
+.button1 span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s;
+}
+@keyframes btn-anim2 {
+    0% {
+        top: -100%;
+    }
+
+    50%,
+    100% {
+        top: 100%;
+    }
+}
+.button1 span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s;
+}
+@keyframes btn-anim3 {
+    0% {
+        right: -100%;
+    }
+
+    50%,
+    100% {
+        right: 100%;
+    }
+}
+.button1 span:nth-child(4) {
+    bottom: 100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s;
+}
+@keyframes btn-anim4 {
+    0% {
+        bottom: -100%;
+    }
+
+    50%,
+    100% {
+        bottom: 100%;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}

@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import '../styles.css';
+import '../styles/all.css';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -8,7 +8,7 @@ export default function AvailablePage() {
 
 
     return (
-        <div>
+        <div >
             <table className='table'>
                 <thead>
                     <tr style={{ backgroundColor: 'black', color: 'white', gap: '30px', fontWeight: 'bold', textIndent: '5px'}}>
@@ -167,10 +167,10 @@ export default function AvailablePage() {
             </table>
             
             <Link href="/" style={{ position: 'absolute', backgroundColor: 'black', color: 'white', paddingLeft: '10px', paddingRight: '10px', paddingTop: '3px', paddingBottom: '3px', marginLeft: '20px', marginTop: '20px', border: '1px solid white', borderRadius: '4px'}}>Back</Link>
-            <Image src="/IMG_20241116_220020.jpg" alt="background" style={{width: '2000px', height: '785px'}} />
+            <Image src="/IMG_20241116_220020.jpg" alt="background" width={2000} height={785} />
             <p style={{ position: 'absolute', backgroundColor: '#ccc', paddingRight: '350px', paddingTop: '50px', paddingBottom: '200px', marginLeft: '100px', marginTop: '-350px', borderRadius: '10px'}}></p>
             <p style={{ position: 'absolute', backgroundColor: 'orangered', paddingRight: '350px', paddingTop: '50px', paddingBottom: '180px', marginLeft: '100px', marginTop: '-340px', borderRadius: '10px'}}></p>
-            <Image src='/meat.png' alt='logo' style={{position: 'absolute', width: '220px', height: '200px', marginTop: '-120px', marginLeft: '50px'}} />
+            <Image src='/meat.png' alt='logo' width={220} height={200} style={{position: 'absolute', marginTop: '-120px', marginLeft: '50px'}} />
 
             <p style={{ position: 'absolute', backgroundColor: '#ccc', paddingRight: '350px', paddingTop: '50px', paddingBottom: '200px', marginLeft: '590px', marginTop: '-350px', borderRadius: '10px'}}></p>
             <p style={{ position: 'absolute', backgroundColor: 'orangered', paddingRight: '350px', paddingTop: '50px', paddingBottom: '180px', marginLeft: '590px', marginTop: '-340px', borderRadius: '10px'}}></p>

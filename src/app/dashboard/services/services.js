@@ -1,12 +1,12 @@
 "use client";
 import React from 'react';
-import '../styles.css';
+import '../styles/all.css';
 import Link from 'next/link';
 import Image from 'next/image';
 
 export default function ServicesPage() {
     return (
-        <div className="bg-blue-500">
+        <div className='container'>
             <main >
                 <section>
                 <p style={{position: 'absolute', backgroundImage: ' url(./IMG_20241116_220020.jpg)', backgroundPosition: 'center', backgroundAttachment: 'fixed', backgroundSize: 'cover', backgroundRepeat: 'no-repeat',  opacity: '100%', height: '100vh', width: '100vw', }}></p>

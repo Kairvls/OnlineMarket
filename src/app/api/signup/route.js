@@ -10,6 +10,7 @@ export async function POST(req) {
         const [result] = await pool.execute(query, [username, email, hashedPassword]);
 
         return new Response(JSON.stringify({ message: 'User created successfully!' }), { status: 201 });
+        
     } catch (error) {
         return new Response(JSON.stringify({ error: 'Error creating user', details: error.message }), { status: 500 });
     }
